@@ -61,7 +61,7 @@
     \newcommand*{\unitrow}[4]{%
          \addtocounter{cost}{1000 * \real{##2} * \real{##3}}%
          \addtocounter{subcost}{1000 * \real{##2} * \real{##3}}%
-         ##1 & \formatNumber{##2} ##4 & \$\formatNumber{##3} & \$\FPmul{\cost}{##2}{##3}\formatNumber{\cost}%
+         ##1 & ##2 ##4 & \$\formatNumber{##3} & \$\FPmul{\cost}{##2}{##3}\formatNumber{\cost}%
          \\
     }
     % Create a new row from title and expense amount
@@ -103,10 +103,11 @@
     \begin{longtable}{@{\extracolsep{\fill}\hspace{\tabcolsep}} l r r r }
     \hline
     {\bf Description of Services} & \multicolumn{1}{c}{\bf Quantity} & \multicolumn{1}{c}{\bf Unit Price} & \multicolumn{1}{c}{\bf Amount} \\*
-    \hline\hline
+    \hline
     \endhead
 }{
-    \hline\hline\hline
+    \hline
     {\bf Balance Due} & & & {\bf \$\total{cost}} \\
+    \hline
     \end{longtable}
 }

@@ -61,25 +61,25 @@
     \newcommand*{\unitrow}[4]{%
          \addtocounter{cost}{1000 * \real{##2} * \real{##3}}%
          \addtocounter{subcost}{1000 * \real{##2} * \real{##3}}%
-         ##1 & ##2 ##4 & \$\formatNumber{##3} & \$\FPmul{\cost}{##2}{##3}\formatNumber{\cost}%
+         ##1 & ##2 ##4 & \pounds\formatNumber{##3} & \pounds\FPmul{\cost}{##2}{##3}\formatNumber{\cost}%
          \\
     }
     % Create a new row from title and expense amount
     \newcommand*{\feerow}[2]{%
          \addtocounter{cost}{1000 * \real{##2}}%
          \addtocounter{subcost}{1000 * \real{##2}}%
-         ##1 & & \$\formatNumber{##2} & \$\FPmul{\cost}{##2}{1}\formatNumber{\cost}%
+         ##1 & & \pounds\formatNumber{##2} & \pounds\FPmul{\cost}{##2}{1}\formatNumber{\cost}%
          \\
     }
 
     \newcommand{\subtotalNoStar}{
-        {\bf Subtotal} & {\bf \total{subhours} hours} &  & {\bf \$\total{subcost}}
+        {\bf Subtotal} & {\bf \total{subhours} hours} &  & {\bf \pounds\total{subcost}}
         \setcounter{subcost}{0}
         \setcounter{subhours}{0}
         \\*[1.5ex]
     }
     \newcommand{\subtotalStar}{
-        {\bf Subtotal} & & & {\bf \$\total{subcost}}
+        {\bf Subtotal} & & & {\bf \pounds\total{subcost}}
         \setcounter{subcost}{0}
         \\*[1.5ex]
     }
@@ -107,7 +107,7 @@
     \endhead
 }{
     \hline
-    {\bf Balance Due} & & & {\bf \$\total{cost}} \\
+    {\bf Balance Due} & & & {\bf \pounds\total{cost}} \\
     \hline
     \end{longtable}
 }
